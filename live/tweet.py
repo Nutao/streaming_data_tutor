@@ -90,7 +90,7 @@ def send_tweets_to_spark(http_resp, tcp_connection):
         # 将字符串转换为字节串
         data_to_send = texts_str.encode('utf-8')
         tcp_connection.send(data_to_send)
-        time.sleep(2)  #
+        time.sleep(5)  #
       
         print(tweet_text)
         print ("------------------------------------------")
