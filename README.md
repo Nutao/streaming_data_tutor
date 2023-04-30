@@ -1,5 +1,12 @@
-[toc]
+- [课件](#课件)
+  - [1. 环境要求 Overview](#1-环境要求-overview)
+  - [2. 部署Spark \& Spark Streaming](#2-部署spark--spark-streaming)
+  - [3. 部署Anaconda，管理Python Runtime和Dependency](#3-部署anaconda管理python-runtime和dependency)
+  - [4. 部署twitter code/pyspark/pandas等依赖](#4-部署twitter-codepysparkpandas等依赖)
+  - [5. 执行代码](#5-执行代码)
 
+
+# 课件
 ## 1. 环境要求 Overview
 
 overview
@@ -185,19 +192,19 @@ conda install xxx
 ```
 
 
+## 5. 执行代码
 
-## 5. Run Code
-
-
+> Spark Flow
 
 ![streaming-flow](./img/streaming-flow.png)
+
+> Arch
 
 ![streaming-arch](./img/streaming-arch.png)
 
 
 
 TODO：画一个架构流程图
-
 
 
 Find More Info： https://nutao.github.io/
