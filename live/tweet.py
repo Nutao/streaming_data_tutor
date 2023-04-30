@@ -79,11 +79,12 @@ def send_tweets_to_spark(http_resp, tcp_connection):
       full_tweet = json.loads(line)
       for tweet in full_tweet['statuses']:
         send_data=""
-        tweet_text=tweet['entities']['hashtags']
+        tweet_text=tweet['entities']['hashtags']   # list
         texts=[]
         for tweet_dict in tweet_text:
           texts.append(tweet_dict['text'])
-        texts.append(random.choice(word_list))
+        if len(texts) < 1:                # 增加逻辑。未取到hashtag再插入随机tag
+          texts.append(random.choice(word_list))
         texts_str = '\n'.join(texts) + '\n'
        
 
@@ -92,7 +93,7 @@ def send_tweets_to_spark(http_resp, tcp_connection):
         tcp_connection.send(data_to_send)
         time.sleep(5)  #
       
-        print(tweet_text)
+        print(data_to_send)
         print ("------------------------------------------")
         
     # except:
