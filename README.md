@@ -205,9 +205,9 @@ Find More Info： https://github.com/Nutao/streaming_data_tutor
 
 
 
-TODO：画一个流程图
+主要的流程图
 
-
+<img src="./img/flow.png" alt="image-20230501203633956" style="zoom:50%;" />
 
 - **tweet.py**: 调试Twitter查询相关代码，获取[recent search endpoint](https://developer.twitter.com/en/docs/twitter-api/tweets/search/introduction)
   
@@ -215,6 +215,8 @@ TODO：画一个流程图
   - 如果不确定数据的格式，可以在日志中多print信息
   
 - **run.py:** 调试Spark任务代码。注意SparkContext的更改
+
+  - HTTP 请求方法Doc：https://www.runoob.com/tags/html-httpmethods.html
 
   - 由于部署Spark使用的cluter模式，在SparkContext构造器中，应传入cluster的**master地址**。
 
@@ -246,16 +248,16 @@ TODO：画一个流程图
 
 - 构建web app，存储分词统计结果，在前端进行展示。
 
-   doc: https://dormousehole.readthedocs.io/en/latest/
+  doc: https://dormousehole.readthedocs.io/en/latest/
 
   - 使用Conda安装Flask依赖
-  
+
     ```shell
     conda install flask
     ```
 
   - 创建web app工程需要的目录
-  
+
     ```shell
     (spark-py) ➜  streaming_data git:(main) ✗ tree dashboard
     dashboard
@@ -273,13 +275,13 @@ TODO：画一个流程图
     ChartJS Doc：https://www.runoob.com/chartjs/chartjs-tutorial.html
 
     首先，引入cdn依赖
-  
+
     ```html
     <script src="https://cdn.staticfile.org/Chart.js/3.9.1/chart.js"></script>
     ```
 
     然后，重写Chart上下文script。包括构造器和配置。需要查阅doc：https://www.runoob.com/chartjs/chartjs-type-bar.html
-  
+
     ```javascript
     var data = {
                 // labels: ['mango', 'apple', 'melon', 'cherry', 'Python', 'startups', 'bayarea', 'innovation','cybersecurity', 'kiwi'],
@@ -326,7 +328,7 @@ TODO：画一个流程图
                 }
             };
     ```
-  
+
 
 
 

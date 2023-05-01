@@ -18,7 +18,7 @@ ssc = StreamingContext(sc, 3)
 
 # Create a DStream that will connect to hostname:port, like localhost:9999
 lines = ssc.socketTextStream("localhost", 9999)
-# Socket数据格式为 \ndata1\ndata2\n
+# Socket数据格式为 \ndata1\ndata2\n  ["Java","Python","Java"]
 words = lines.flatMap(lambda line: line.split("/n"))
 
 word_counts = words.map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b)
@@ -27,6 +27,7 @@ collections = {}
 # total_count = word_counts.map(lambda x: x[1]).reduce(add)
 # total_count = word_counts.map(lambda x: x[1]).reduce(add)
 
+# {"Java": 2, "Python":1}
 # 打印结果
 def print_results(rdd):
     for pair in rdd.collect():
@@ -38,6 +39,7 @@ def print_results(rdd):
 
 
 def send_data_to_dashboard():
+    # {"AI":3, "Java": 2, "Python":1}
     top_10 = sorted(collections.items(), key=lambda x: x[1], reverse=True)[:10]
     words = []
     counts = []
@@ -46,9 +48,10 @@ def send_data_to_dashboard():
         counts.append(count)
         print("{}: {}".format(word, count))
 
-    print(words)
-    print(counts)
+    # print(words)
+    # print(counts)
     # initialize and send the data through REST API
+    # https://www.runoob.com/tags/html-httpmethods.html
     try:
         url = 'http://localhost:5001/updateData'
         request_data = {'label': str(words), 'data': str(counts)}
