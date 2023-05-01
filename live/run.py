@@ -4,7 +4,7 @@ import sys
 import requests
 # from operator import add
 
-
+# 没用到
 def update_total_count(current_count, previous_count):
     if previous_count is None:
         previous_count = 0
@@ -18,6 +18,7 @@ ssc = StreamingContext(sc, 3)
 
 # Create a DStream that will connect to hostname:port, like localhost:9999
 lines = ssc.socketTextStream("localhost", 9999)
+# Socket数据格式为 \ndata1\ndata2\n
 words = lines.flatMap(lambda line: line.split("/n"))
 
 word_counts = words.map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b)
@@ -27,8 +28,6 @@ collections = {}
 # total_count = word_counts.map(lambda x: x[1]).reduce(add)
 
 # 打印结果
-
-
 def print_results(rdd):
     for pair in rdd.collect():
         if pair[0] in collections:
@@ -63,6 +62,5 @@ def send_data_to_dashboard():
 word_counts.foreachRDD(print_results)
 
 # 打印结果
-
 ssc.start()             # Start the computation
 ssc.awaitTermination()  # Wait for the computation to terminate

@@ -191,8 +191,9 @@ pip install -r requirements.txt
 conda install xxx
 ```
 
-
 ## 5. 执行代码
+
+Find More Info： https://github.com/Nutao/streaming_data_tutor
 
 > Spark Flow
 
@@ -204,10 +205,9 @@ conda install xxx
 
 
 
-TODO：画一个架构流程图
+TODO：画一个流程图
 
 
-Find More Info： https://nutao.github.io/
 
 - **tweet.py**: 调试Twitter查询相关代码，获取[recent search endpoint](https://developer.twitter.com/en/docs/twitter-api/tweets/search/introduction)
   
@@ -216,9 +216,9 @@ Find More Info： https://nutao.github.io/
   
 - **run.py:** 调试Spark任务代码。注意SparkContext的更改
 
-  - 由于部署Spark使用的cluter模式，在SparkContext构造器中，应传入cluster的master地址。
+  - 由于部署Spark使用的cluter模式，在SparkContext构造器中，应传入cluster的**master地址**。
 
-  - 从twitter中获取的数据，需要分词、计数，然后再通过传递给flask web app。需要改造代码，将前10的trends信息构造成webapp需要的格式，使用requests库发起请求。
+  - 从twitter中获取的数据，需要分词、计数，然后再通过传递给flask web app。需要改造代码，将前10的trends**信息构造成webapp需要的格式**，使用requests库发起请求。
 
     ```python
     def send_data_to_dashboard():
@@ -269,14 +269,16 @@ Find More Info： https://nutao.github.io/
   - 编写相关代码。。。
 
     **此处有坑**，由于Chart.js已经做过多次版本迭代，需要对模板代码进行改动。
+    
+    ChartJS Doc：https://www.runoob.com/chartjs/chartjs-tutorial.html
 
-    首先，直接引入cdn依赖
+    首先，引入cdn依赖
   
     ```html
     <script src="https://cdn.staticfile.org/Chart.js/3.9.1/chart.js"></script>
     ```
 
-    然后，充血Chart上下文script。包括构造器和配置。需要查阅doc：https://www.runoob.com/chartjs/chartjs-type-bar.html
+    然后，重写Chart上下文script。包括构造器和配置。需要查阅doc：https://www.runoob.com/chartjs/chartjs-type-bar.html
   
     ```javascript
     var data = {
@@ -325,11 +327,12 @@ Find More Info： https://nutao.github.io/
             };
     ```
   
-    
 
-主要关注内容：
+
+
+
+Next关注内容：
 
 - Streaming Data
 - Spark相关的内容
-- 项目用到的技术
 
