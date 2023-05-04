@@ -332,5 +332,9 @@ Find More Info： https://github.com/Nutao/streaming_data_tutor
 
 
 ## 6. 提供流式的查询关键字参数
-流程图：
+
+- 流程图：
 ![提供流式关键字参数](img/parameter.png)
+
+- 注入灵魂（Data Flow）
+![提供流式关键字参数](img/new-flow.png)
