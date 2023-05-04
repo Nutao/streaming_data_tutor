@@ -4,6 +4,7 @@
   - [3. 部署Anaconda，管理Python Runtime和Dependency](#3-部署anaconda管理python-runtime和dependency)
   - [4. 部署twitter code/pyspark/pandas等依赖](#4-部署twitter-codepysparkpandas等依赖)
   - [5. 执行代码](#5-执行代码)
+  - [6. 提供流式的查询关键字参数](#6-提供流式的查询关键字参数)
 
 
 # 课件
@@ -330,11 +331,6 @@ Find More Info： https://github.com/Nutao/streaming_data_tutor
     ```
 
 
-
-
-
-Next关注内容：
-
-- Streaming Data
-- Spark相关的内容
-
+## 6. 提供流式的查询关键字参数
+流程图：
+![提供流式关键字参数](img/parameter.png)
