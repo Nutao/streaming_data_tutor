@@ -8,6 +8,9 @@
 
 
 # 课件
+For more information? 
+Contact me: https://www.zhihu.com/people/nutao4me
+
 ## 1. 环境要求 Overview
 
 overview
@@ -78,24 +81,6 @@ Windows安装教程：https://blog.csdn.net/fan18317517352/article/details/12303
 
 - 安装
 
-  **这一步注意选择**
-
-  ![img](https://img-blog.csdnimg.cn/3bb2a5ab55c046bb83034f9e2c45364a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6I-c6bifMeWPt--8ge-8gQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
-
-- 配置环境变量
-
-  ```
-  E:\Anaconda 
-  E:\Anaconda\Scripts 
-  E:\Anaconda\Library\mingw-w64\bin
-  E:\Anaconda\Library\usr\bin 
-  E:\Anaconda\Library\bin
-  ```
-
-![img](https://img-blog.csdnimg.cn/ac003905f2094b06b70a7f16ce8bdd68.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6I-c6bifMeWPt--8ge-8gQ==,size_20,color_FFFFFF,t_70,g_se,x_16)
-
-
-
 Linux 安装教程：https://www.anaconda.com/download
 
 Mac安装教程：https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/
@@ -157,7 +142,7 @@ conda install --channel 网址地址 matplotlib = 版本号
 ## 4. 部署twitter code/pyspark/pandas等依赖
 
 - 整理出来的依赖
-
+<p hidden>
 ```
 certifi==2019.3.9
 chardet==3.0.4
@@ -179,6 +164,7 @@ spacy
 wordcloud
 pyspark
 ```
+</p>
 
 - 安装依赖
 
@@ -283,6 +269,7 @@ Find More Info： https://github.com/Nutao/streaming_data_tutor
 
     然后，重写Chart上下文script。包括构造器和配置。需要查阅doc：https://www.runoob.com/chartjs/chartjs-type-bar.html
 
+    <p hidden>
     ```javascript
     var data = {
                 // labels: ['mango', 'apple', 'melon', 'cherry', 'Python', 'startups', 'bayarea', 'innovation','cybersecurity', 'kiwi'],
@@ -329,7 +316,10 @@ Find More Info： https://github.com/Nutao/streaming_data_tutor
                 }
             };
     ```
+</p>
 
+- 效果图：
+![提供流式关键字参数](img/char.png)
 
 ## 6. 提供流式的查询关键字参数
 
@@ -338,3 +328,7 @@ Find More Info： https://github.com/Nutao/streaming_data_tutor
 
 - 注入灵魂（Data Flow）
 ![提供流式关键字参数](img/new-flow.png)
+
+
+For more information? 
+知乎: https://www.zhihu.com/people/nutao4me
