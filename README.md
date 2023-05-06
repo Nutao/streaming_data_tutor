@@ -142,8 +142,8 @@ conda install --channel 网址地址 matplotlib = 版本号
 ## 4. 部署twitter code/pyspark/pandas等依赖
 
 - 整理出来的依赖
-<p hidden>
-```
+
+<!-- ```
 certifi==2019.3.9
 chardet==3.0.4
 idna==2.8
@@ -163,8 +163,7 @@ urllib3==1.25.3
 spacy
 wordcloud
 pyspark
-```
-</p>
+``` -->
 
 - 安装依赖
 
@@ -269,7 +268,7 @@ Find More Info： https://github.com/Nutao/streaming_data_tutor
 
     然后，重写Chart上下文script。包括构造器和配置。需要查阅doc：https://www.runoob.com/chartjs/chartjs-type-bar.html
 
-    <p hidden>
+<!--  
     ```javascript
     var data = {
                 // labels: ['mango', 'apple', 'melon', 'cherry', 'Python', 'startups', 'bayarea', 'innovation','cybersecurity', 'kiwi'],
@@ -316,7 +315,7 @@ Find More Info： https://github.com/Nutao/streaming_data_tutor
                 }
             };
     ```
-</p>
+    -->
 
 - 效果图：
 ![提供流式关键字参数](img/char.png)
